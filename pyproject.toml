@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "hackathon_project"
+name = "spelman-jags"
 version = "0.1.0"
-description = ""
+description = "BE Hackathon Dependencies"
 authors = ["Danae Troupe <danaetroupe@gmail.com>"]
 readme = "README.md"
 
