@@ -9,3 +9,7 @@ pairings = db.table('app66AlHq30vppBQp', 'Pairings')
 
 for records in airports.iterate():
     print(records)
+
+
+def getThis(paramater):
+    return "hello"
