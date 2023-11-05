@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_marshmallow import Marshmallow
@@ -11,7 +11,7 @@ cors = CORS()
 
 def create_app():
     """Application-factory pattern"""
-    app = flask(__name__)
+    app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
