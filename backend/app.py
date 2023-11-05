@@ -1,25 +1,23 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from flask_marshmallow import Marshmallow
 from flask_cors import CORS
+import datetime
 
-db = SQLAlchemy()
-migrate = Migrate()
 ma = Marshmallow()
 cors = CORS()
 
-def create_app():
-    """Application-factory pattern"""
-    app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app = Flask(__name__)
+ma.init_app(app)
+cors.init_app(app)
 
-    # Initialize extensions
-    # To use the application instances above, instantiate with an application:
-    db.init_app(app)
-    migrate.init_app(app, db)
-    ma.init_app(app)
-    cors.init_app(app)
-
-    return app
+@app.route('/')
+def get_time():
+    return {
+        'Name':"geek", 
+        "Age":"22",
+        "Date": datetime.datetime.now(),
+        "programming":"python"
+        }
+    
+if __name__ == '__main__':
+    app.run(debug=True)
