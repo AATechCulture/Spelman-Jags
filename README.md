@@ -1,69 +1,53 @@
-# BE Smart Hack Repo Template
+# Pilot Bridges
 
 ## Description 🚨 
-This is a repository template containing all the information that needs to accompany your project.
+A web application that tackles airline scheduling challenges by allowing pilots to initiate and negotiate flight pairing trades. 
 
-Feel free to use any languages or frameworks, but the following information must be filled out before hacking ends.
 ___________
-# Project Name
+# Pilot Bridges
 
 ## Challenge Statement(s) Addressed 🎯
-**...include the challenge statement(s) the project worked to address**
+The #1 highest complaint voiced by airline pilots surrounds scheduling issues. The work-life balance of pilots is rated very poor, and early retirement for pilots is high. Spelman-Jags seeks to find a solution that will increase employee retention through a long-term scalable solution that boosts overall pilot satisfaction.
 
-Examples:
-* How might we decrease the United States chances of alien and monster attacks given what we know from popular alien and monster movies?
-* How might we make it possible for people in cities not to have to own a car by making car-sharing easier so that the environment will be less damaged and people can save money?
-* How might we ....
 
 ## Project Description 🤯
-**....at lease 3 sentences describing what the project does and how it works**
+Pilot Bridges directly addresses requests from airline pilots at American Airlines. This easy web application is designed to seamlessly work aside American Airline's existing preferential bidding system that schedules pilots. After pilots have been assigned their monthly schedule, they can export their schedule to Pilot Bridges and open flight pairings to be traded. They can filter through pairings that match their requirements and request trades from other pilots using the application. Pilot Bridges also incorporates a notification system and an omnichannel approach so that all necessary features are seamlessly integrated into the application. Pilots will no longer have to to through an informal process that requires days of waiting for higher approval to make trades, and can now have trades instantly approved via the application. 
+
 
 ## Project Value 💰
-**....at lease 3 sentences describing your target customer and tangible benefits from your solution**
+American Airline pilots voiced complaints for years surrounding their work-life balance. While new contracts have been recently negotiated to allow pilots more flexibility in their scheduling preferences, there has yet to be software built to support those. Now, with Pilot Bridges, airline pilots will experience more independence over their schedule without the airline having to sacrifice productivity.
 
 
 ## Tech Overview 💻
-**... what tech was used to bring this project to life?**
-
-Example:
-* FastAPI
-* Hugging Face AI Models
-* Next.js
-
+* flask
+* bootstrap
+* pyairtable
+* trycourier 
+* flask-sqlalchemy
+* flask-migrate 
+* flask-marshmallow
+* flask-cors 
 
 ### ✨ Contributors ✨
-**...tell the world who you and your team are 🙂**
-* Team member X (AAdvantage No)
-* Team member Y (AAdvantage No)
-* Team member Z (AAdvantage No)
+* Danae Troupe
+* Amari Grimes
+* Sharon Onyanchn
+* Ashley Sanders
+* India Easton
+
 
 ### School Name 🏫
-The ABC School
+Spelman College
+
 
 ### Team Name 🏷
-Coding Costars
+The Jags
+
 
 ### Link to Video Pitch 📹
-**...point us to where you tell us about your solution 😄**
+**coming soon...**
+
 
 ### Link to Demo Presentation 📽
-**...point us to your PPT or Canva slides 😍**
-
-### Team Checklist due before 5p Saturday 11/4 ✅
-- [ ] Team photo
-- [ ] Team Slack channel
-- [ ] Communication established with mentor
-- [ ] Repo creation from this template
-- [ ] Hangar registration
-- [ ] Scavenger Hunt submission
-
-### Project Checklist due before 10a Sunday 11/5 🏁
-- [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
-- [ ] Code merged to main branch
-
-### Sample Checklist for Syntax Example 
-- [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
-- [ ] Code merged to main branch
+https://github.com/AATechCulture/pilotbridges/blob/main/Team%20Presentation%20Deck.pptx
 
