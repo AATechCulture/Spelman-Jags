@@ -1,31 +1,23 @@
-from flask import Flask
-from flask_marshmallow import Marshmallow
-from flask_cors import CORS
+from flask import Flask, redirect, url_for, render_template
 import datetime
-
-ma = Marshmallow()
-cors = CORS()
+import query
 
 app = Flask(__name__)
-ma.init_app(app)
-cors.init_app(app)
 
 
 @app.route('/')
 def get_time():
-    return {
-        'Name':"geek", 
-        "Age":"22",
-        "Date": datetime.datetime.now(),
-        "programming":"python"
-        }
+    return render_template("index.html")
+    # if query.emailExistsInUsers(email):
+    #     return redirect(url_for("trades"))
 
-@app.route('/trades')
-def show_trades():
+
+# @app.route('/trades')
+# def show_trades():
     
     
-@app.route('/{employee_id}')
-def show_profile():
+# @app.route('/{employee_id}')
+# def show_profile():
     
     
 if __name__ == '__main__':
