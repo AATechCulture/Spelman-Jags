@@ -3,6 +3,8 @@
 ## Description 🚨 
 A web application that tackles airline scheduling challenges by allowing pilots to initiate and negotiate flight pairing trades. 
 
+![image](https://github.com/danaetroupe/Spelman-Jags/assets/105681884/8e409a97-4bed-4140-af5b-d91a37e07e46)
+
 ___________
 # Pilot Bridges
 
