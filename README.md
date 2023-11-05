@@ -12,6 +12,7 @@ ___________
 
 ## Challenge Statement(s) Addressed 🎯
 The #1 highest complaint voiced by airline pilots surrounds scheduling issues. The work-life balance of pilots is rated very poor, and early retirement for pilots is high. Spelman-Jags seeks to find a solution that will increase employee retention through a long-term scalable solution that boosts overall pilot satisfaction.
+![image](https://github.com/danaetroupe/Spelman-Jags/assets/105681884/d7bd231f-ab61-434a-9b15-dc8c0ac52e23)
 
 
 ## Project Description 🤯
