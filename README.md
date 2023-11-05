@@ -50,7 +50,7 @@ The Jags
 
 
 ### Link to Video Pitch 📹
-**coming soon...**
+https://youtu.be/XUdWm-KUAuk
 
 
 ### Systems and Design Document
