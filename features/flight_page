@@ -1,69 +1,47 @@
 from flask import Flask, requests, jsonify
+import requests
 
 app = Flask(__name__)
 
-# Example data structures for pilots and flights (change when getting the api points)
-pilots = [
-    {
-        "id": 1,
-        "seat": 1,
-        "name": "Pilot 1",
-        "home_base": "New York",
-        "max_flight_hours": 8,
-        "available_hours": 6,
-        "can_operate_aircraft": ["A320", "B737"],
-    },
-    {
-        "id": 2,
-        "seat": 1,
-        "name": "Pilot 2",
-        "home_base": "New York",
-        "max_flight_hours": 8,
-        "available_hours": 7,
-        "can_operate_aircraft": ["A320", "B737"],
-    },
+def get_pilot_info_from_api(pilot_id):
+    # Define the API endpoint for pilot data (replace with your actual API endpoint)
+    api_url = f"https://example.com/api/pilots/{pilot_id}"
+    
+    try:
+        response = requests.get(api_url)
+
+        if response.status_code == 200:
+            pilot_info = response.json()
+            return pilot_info
+        else:
+            print(f"Failed to fetch pilot information. Status code: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return None
+
+flight_data = [
+    {"flight_id": 101, "departure": "New York", "destination": "Los Angeles", "pilot_id": 1},
+    {"flight_id": 102, "departure": "Los Angeles", "destination": "Chicago", "pilot_id": 2},
+    {"flight_id": 103, "departure": "Chicago", "destination": "New York", "pilot_id": 3},
 ]
 
-flights = [
-    {
-        "flight_id": 1,
-        "pilot_id": 1,
-        "aircraft_type": "A320",
-        "departure_time": "2023-12-15T10:00:00",
-        "home_base": "New York",
-    },
-    {
-        "flight_id": 2,
-        "pilot_id": 2,
-        "aircraft_type": "B737",
-        "departure_time": "2023-12-15T14:00:00",
-        "home_base": "New York",
-    },
-]
+# Function to get pilot information by ID
+def can_change_flight(pilot_id, departure, destination):
+    pilot_info = get_pilot_info_from_api(pilot_id)
+    if pilot_info:
+        if pilot_info["location_base"] == departure and pilot_info["seniority"] >= 5:
+            return True
+    return False
 
-# Function to find matching flights for a pilot 
-def find_matching_flights(pilot_id):
-    pilot = next((p for p in pilots if p["id"] == pilot_id), None)
-    if pilot:
-        matching_flights = [
-            flight for flight in flights
-            if (
-                flight["home_base"] == pilot["home_base"]
-                and flight["departure_time"] >= "2023-12-15T08:00:00"
-                and flight["departure_time"] <= "2023-12-15T16:00:00"
-                and flight["aircraft_type"] in pilot["can_operate_aircraft"]
-            )
-        ]
-        return matching_flights
-    return []
+# Example usage
+pilot_id_to_check = 1
+flight_to_change = {"departure": "New York", "destination": "Los Angeles"}
 
-@app.route("/pilots/<int:pilot_id>/matching_flights", methods=["GET"])
-def get_matching_flights(pilot_id):
-    matching_flights = find_matching_flights(pilot_id)
-    return jsonify(matching_flights)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if can_change_flight(pilot_id_to_check, flight_to_change["departure"], flight_to_change["destination"]):
+    print("Pilot can change the flight.")
+else:
+    print("Pilot cannot change the flight.")
 
 '''
 its really just a GET the api endpoint that I create and then returning the json file of the different flights onto the page
