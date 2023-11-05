@@ -1,7 +1,7 @@
 # Pilot Bridges
 
 ## Description 🚨 
-A web application that tackles airline scheduling challenges by allowing pilots to initiate and negotiate flight pairing trades. 
+Pilot Bridges is a long-term scalable solution to scheduling challenges faced by airlines, allowing pilots to initiate and negotiate flight pairing trades. This web application utilizes a structured data system, easy to use graphical interface, and doesn't require any changes to American Airline's existing scheduling system. Pilot Bridges is uniquely suited to address the challenges voiced by American Airline's pilots, and is in compliance with recent contractal changes. 
 
 <img width="468" alt="image" src="https://github.com/danaetroupe/Spelman-Jags/assets/105681884/85b78301-aeb4-4b27-944b-455ec19212dd">
 <img width="614" alt="image" src="https://github.com/danaetroupe/Spelman-Jags/assets/105681884/912694d7-659f-481e-9204-aaad50cf070d">
