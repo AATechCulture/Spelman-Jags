@@ -14,13 +14,14 @@ users = db.table('app66AlHq30vppBQp','Users')
 #for records in users.iterate():
     #print(records)
 
-def getuser(value):
+def get_user(employee_id):
     db = Api(API_TOKEN)
     url = 'https://api.airtable.com/v0/app66AlHq30vppBQp/Users?filterByFormula=employee_id=' + value
     userinfo = db.request('get',url)
     return(userinfo)
     #print(url)
-def getflights(value2):
+    
+def get_pairing(pairing_id):
     db= Api(API_TOKEN)
     url = 'https://api.airtable.com/v0/app66AlHq30vppBQp/Pairings?filterByFormula=Pilot=' + value2
     userinfo = db.request('get',url)

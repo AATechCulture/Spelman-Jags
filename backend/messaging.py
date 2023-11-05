@@ -3,7 +3,7 @@ from trycourier import Courier
 TOKEN = 'pk_prod_296G2Q1HXTM629JN5V7HAFJESS3G'
 client = Courier(auth_token=TOKEN)
 
-def requestMadeEmail(email_address, sender_name, recipient_name):
+def request_made_email(email_address, sender_name, recipient_name):
     client.send_message(
     message={
         "to": {
@@ -17,7 +17,7 @@ def requestMadeEmail(email_address, sender_name, recipient_name):
     }
     )
 
-def requestSentEmail(email_address, sender_name, recipient_name, status):
+def request_sent_email(email_address, sender_name, recipient_name, status):
     client.send_message(
   message={
     "to": {
@@ -31,5 +31,3 @@ def requestSentEmail(email_address, sender_name, recipient_name, status):
     },
   }
 )
-
-requestMadeEmail("jerry.volcy@gmail.com", "Danae Troupe", "Jerry Volcy")
