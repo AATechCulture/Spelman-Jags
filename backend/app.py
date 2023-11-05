@@ -10,6 +10,7 @@ app = Flask(__name__)
 ma.init_app(app)
 cors.init_app(app)
 
+
 @app.route('/')
 def get_time():
     return {
@@ -18,6 +19,14 @@ def get_time():
         "Date": datetime.datetime.now(),
         "programming":"python"
         }
+
+@app.route('/trades')
+def show_trades():
+    
+    
+@app.route('/{employee_id}')
+def show_profile():
+    
     
 if __name__ == '__main__':
     app.run(debug=True)
