@@ -33,10 +33,6 @@ American Airline pilots voiced complaints for years surrounding their work-life 
 * sqlite
 
 
-Systems and Design document link: 
-https://docs.google.com/document/d/1_dLxTPLm2iquTi2iEW3W10W8ADqb-cKJwgcuFr3pftg/edit
-
-
 ### ✨ Contributors ✨
 * Danae Troupe
 * Amari Grimes
@@ -55,6 +51,10 @@ The Jags
 
 ### Link to Video Pitch 📹
 **coming soon...**
+
+
+### Systems and Design Document
+https://docs.google.com/document/d/1_dLxTPLm2iquTi2iEW3W10W8ADqb-cKJwgcuFr3pftg/edit
 
 
 ### Link to Demo Presentation 📽
