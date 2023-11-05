@@ -6,7 +6,7 @@ cu = cx.cursor()
 # query = cu.execute('SELECT * FROM Users')
 # print(query.fetchall())
 
-def emailExistsInUsers(email):
+def get_id_from_email(email):
     sql = 'SELECT employee_id FROM Users WHERE email_address = "%s"' % email
     query = cu.execute(sql)
     id = query.fetchone()
@@ -15,7 +15,7 @@ def emailExistsInUsers(email):
     else:
         return False
 
-print(emailExistsInUsers(("danaetroupe@gmail.com")))
-print(emailExistsInUsers(('lalala')))
+#print(emailExistsInUsers(("danaetroupe@gmail.com")))
+#print(emailExistsInUsers(('lalala')))
 
 cx.close()
