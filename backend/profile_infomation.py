@@ -6,10 +6,25 @@ db = Api(API_TOKEN)
 
 airports = db.table('app66AlHq30vppBQp', 'Airports')
 pairings = db.table('app66AlHq30vppBQp', 'Pairings')
+users = db.table('app66AlHq30vppBQp','Users')
 
-for records in airports.iterate():
-    print(records)
+#for records in airports.iterate():
+   # print(records)
+
+#for records in users.iterate():
+    #print(records)
+
+def getuser(value):
+    db = Api(API_TOKEN)
+    url = 'https://api.airtable.com/v0/app66AlHq30vppBQp/Users?filterByFormula=employee_id=' + value
+    userinfo = db.request('get',url)
+    return(userinfo)
+    #print(url)
+def getflights(value2):
+    db= Api(API_TOKEN)
+    url = 'https://api.airtable.com/v0/app66AlHq30vppBQp/Pairings?filterByFormula=Pilot=' + value2
+    userinfo = db.request('get',url)
+    return(userinfo)
 
 
-def getThis(paramater):
-    return "hello"
+
