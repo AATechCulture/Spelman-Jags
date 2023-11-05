@@ -1,0 +1,28 @@
+# Dummy user info
+user_info = {
+    "Name": "John Doe",
+    "Status": "Junior",
+    "Base": "Dallas, TX",
+    "Aircraft": "Wide Body"
+}
+
+# Function to compare user information
+def compare_user(user_info1, user_info2):
+    for key in user_info1:
+        if user_info1[key] != user_info2.get(key):
+            return False
+    return True
+
+# Create another user for comparison
+other_user_info = {
+    "Name": "Jane Smith",
+    "Status": "Junior",
+    "Base": "Dallas, TX",
+    "Aircraft": "Wide Body"
+}
+
+# Compare the user information
+if compare_user(user_info, other_user_info):
+    print("The user information matches.")
+else:
+    print("The user information does not match.")

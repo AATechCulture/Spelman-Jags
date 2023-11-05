@@ -1,0 +1,52 @@
+from flask import Flask, requests, jsonify
+import requests
+
+app = Flask(__name__)
+
+def get_pilot_info_from_api(pilot_id):
+    # Define the API endpoint for pilot data (replace with your actual API endpoint)
+    api_url = f"https://example.com/api/pilots/{pilot_id}"
+    
+    try:
+        response = requests.get(api_url)
+
+        if response.status_code == 200:
+            pilot_info = response.json()
+            return pilot_info
+        else:
+            print(f"Failed to fetch pilot information. Status code: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        return None
+
+flight_data = [
+    {"flight_id": 101, "departure": "New York", "destination": "Los Angeles", "pilot_id": 1},
+    {"flight_id": 102, "departure": "Los Angeles", "destination": "Chicago", "pilot_id": 2},
+    {"flight_id": 103, "departure": "Chicago", "destination": "New York", "pilot_id": 3},
+]
+
+# Function to get pilot information by ID
+def can_change_flight(pilot_id, departure, destination):
+    pilot_info = get_pilot_info_from_api(pilot_id)
+    if pilot_info:
+        if pilot_info["location_base"] == departure and pilot_info["seniority"] >= 5:
+            return True
+    return False
+
+# Example usage
+pilot_id_to_check = 1
+flight_to_change = {"departure": "New York", "destination": "Los Angeles"}
+
+if can_change_flight(pilot_id_to_check, flight_to_change["departure"], flight_to_change["destination"]):
+    print("Pilot can change the flight.")
+else:
+    print("Pilot cannot change the flight.")
+
+'''
+its really just a GET the api endpoint that I create and then returning the json file of the different flights onto the page
+This is a new feature that is going to be added to the pbs they already have
+
+if the cards parameters matches the user parameters such as the type of aircraft, the hours of time as
+long as its within the duration of the hours the pilot has left, 
+'''
